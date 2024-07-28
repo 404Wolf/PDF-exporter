@@ -16,7 +16,6 @@
         pkgs = import nixpkgs {inherit system;};
         python = pkgs.python3.withPackages (pypkgs: [
           pypkgs.pdfkit
-          pypkgs.shutil
           pypkgs.pillow
         ]);
       in {
@@ -26,6 +25,7 @@
               python
               pkgs.pyright
               pkgs.black
+              pkgs.pandoc
             ];
           };
         };
